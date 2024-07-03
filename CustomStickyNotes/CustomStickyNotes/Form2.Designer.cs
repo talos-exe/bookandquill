@@ -77,48 +77,51 @@
             this.backPageBtn.Size = new System.Drawing.Size(58, 40);
             this.backPageBtn.TabIndex = 1;
             this.backPageBtn.UseVisualStyleBackColor = false;
+            this.backPageBtn.Click += new System.EventHandler(this.previousPageBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Monocraft", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(181, 34);
+            this.label1.Font = new System.Drawing.Font("Monocraft", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(197, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 36);
+            this.label1.Size = new System.Drawing.Size(190, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Page X of X";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Firebrick;
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(128, 128);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bookMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(48, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(140, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // bookMenuToolStripMenuItem
             // 
+            this.bookMenuToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.bookMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem1,
             this.saveAsToolStripMenuItem1,
             this.revealInFileExplorerToolStripMenuItem1,
             this.quitToolStripMenuItem1});
-            this.bookMenuToolStripMenuItem.Image = global::CustomStickyNotes.Properties.Resources.orbselect1;
             this.bookMenuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bookMenuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bookMenuToolStripMenuItem.Name = "bookMenuToolStripMenuItem";
-            this.bookMenuToolStripMenuItem.Size = new System.Drawing.Size(40, 32);
+            this.bookMenuToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
             // 
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
             // saveAsToolStripMenuItem1
@@ -126,25 +129,25 @@
             this.saveAsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newJournalToolStripMenuItem1});
             this.saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.saveAsToolStripMenuItem1.Text = "Save As";
             // 
             // newJournalToolStripMenuItem1
             // 
             this.newJournalToolStripMenuItem1.Name = "newJournalToolStripMenuItem1";
-            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
             this.newJournalToolStripMenuItem1.Text = "New Journal";
             // 
             // revealInFileExplorerToolStripMenuItem1
             // 
             this.revealInFileExplorerToolStripMenuItem1.Name = "revealInFileExplorerToolStripMenuItem1";
-            this.revealInFileExplorerToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.revealInFileExplorerToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.revealInFileExplorerToolStripMenuItem1.Text = "Reveal in File Explorer";
             // 
             // quitToolStripMenuItem1
             // 
             this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(179, 22);
+            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.quitToolStripMenuItem1.Text = "Quit";
             // 
             // _customRTB

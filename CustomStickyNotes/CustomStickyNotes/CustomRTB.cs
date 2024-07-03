@@ -16,9 +16,6 @@ namespace CustomStickyNotes
         {
             InitializeComponent();
             this.Rtf = @"{\rtf1\sl500\";
-            this.TabIndex = 0;
-            this.MaxLength = 280;
-            this.ScrollBars = RichTextBoxScrollBars.None;
 
         }
 

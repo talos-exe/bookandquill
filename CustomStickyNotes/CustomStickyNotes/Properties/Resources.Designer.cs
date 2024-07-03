@@ -143,6 +143,16 @@ namespace CustomStickyNotes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap feathermenuicon {
+            get {
+                object obj = ResourceManager.GetObject("feathermenuicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap journalmenuicon {
             get {
                 object obj = ResourceManager.GetObject("journalmenuicon", resourceCulture);

@@ -36,9 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -137,29 +137,6 @@
             this.panel2.Size = new System.Drawing.Size(776, 426);
             this.panel2.TabIndex = 1;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Monocraft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(259, 335);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(264, 28);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Created by: nohbdy";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(153, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 64);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Book and Quill";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -171,6 +148,29 @@
             this.label6.Size = new System.Drawing.Size(166, 28);
             this.label6.TabIndex = 3;
             this.label6.Text = "Version 1.0";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Monocraft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(259, 335);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(236, 28);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Created by: luke";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(153, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(489, 64);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Book and Quill";
             // 
             // Form1
             // 
