@@ -1,0 +1,13 @@
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\bin\Debug\CustomStickyNotes.exe.config
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\bin\Debug\CustomStickyNotes.exe
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\bin\Debug\CustomStickyNotes.pdb
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.csproj.AssemblyReference.cache
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.csproj.SuggestedBindingRedirects.cache
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.Properties.Resources.resources
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.csproj.GenerateResource.cache
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.csproj.CoreCompileInputs.cache
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.exe
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.pdb
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.CustomRTB.resources
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.Form1.resources
+C:\Users\L\source\repos\CustomStickyNotes\CustomStickyNotes\obj\Debug\CustomStickyNotes.Form2.resources
