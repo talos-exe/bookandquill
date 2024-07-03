@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -57,39 +58,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.expandButtons);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::CustomStickyNotes.Properties.Resources.MenuIcon;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Location = new System.Drawing.Point(24, -5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(165, 154);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::CustomStickyNotes.Properties.Resources.backgrounddirt;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.panel1);
-            this.panel2.Font = new System.Drawing.Font("Monocraft", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(12, 12);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(776, 426);
-            this.panel2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(153, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(489, 64);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Book and Quill";
             // 
             // tableLayoutPanel1
             // 
@@ -107,6 +75,19 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(245, 143);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Monocraft", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 36);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Quit";
+            this.label4.Click += new System.EventHandler(this.promptForQuit);
+            this.label4.MouseEnter += new System.EventHandler(this.mouseEnterToolStripLabel);
+            this.label4.MouseLeave += new System.EventHandler(this.mouseLeaveToolStripLabel);
             // 
             // label2
             // 
@@ -133,18 +114,28 @@
             this.label3.MouseEnter += new System.EventHandler(this.mouseEnterToolStripLabel);
             this.label3.MouseLeave += new System.EventHandler(this.mouseLeaveToolStripLabel);
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Monocraft", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 36);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Quit";
-            this.label4.Click += new System.EventHandler(this.promptForQuit);
-            this.label4.MouseEnter += new System.EventHandler(this.mouseEnterToolStripLabel);
-            this.label4.MouseLeave += new System.EventHandler(this.mouseLeaveToolStripLabel);
+            this.pictureBox1.BackgroundImage = global::CustomStickyNotes.Properties.Resources.MenuIcon;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Location = new System.Drawing.Point(24, -5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(165, 154);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::CustomStickyNotes.Properties.Resources.backgrounddirt;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Font = new System.Drawing.Font("Monocraft", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(12, 12);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(776, 426);
+            this.panel2.TabIndex = 1;
             // 
             // label5
             // 
@@ -152,11 +143,34 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Monocraft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(237, 327);
+            this.label5.Location = new System.Drawing.Point(259, 335);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(264, 28);
             this.label5.TabIndex = 2;
             this.label5.Text = "Created by: nohbdy";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(153, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(489, 64);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Book and Quill";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Monocraft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label6.Location = new System.Drawing.Point(313, 363);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 28);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Version 1.0";
             // 
             // Form1
             // 
@@ -175,11 +189,11 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
