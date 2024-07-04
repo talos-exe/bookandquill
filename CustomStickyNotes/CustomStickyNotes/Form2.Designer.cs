@@ -37,7 +37,6 @@
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.newJournalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._customRTB = new CustomStickyNotes.CustomRTB();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,7 +68,6 @@
             this.backPageBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.backPageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backPageBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.backPageBtn.Image = global::CustomStickyNotes.Properties.Resources.nextpagebtn2;
             this.backPageBtn.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.backPageBtn.Location = new System.Drawing.Point(67, 463);
             this.backPageBtn.Name = "backPageBtn";
@@ -77,6 +75,8 @@
             this.backPageBtn.TabIndex = 1;
             this.backPageBtn.UseVisualStyleBackColor = false;
             this.backPageBtn.Click += new System.EventHandler(this.previousPageBtn_Click);
+            this.backPageBtn.MouseEnter += new System.EventHandler(this.backPageBtn_mouseEnter);
+            this.backPageBtn.MouseLeave += new System.EventHandler(this.backPageBtn_mouseLeave);
             // 
             // label1
             // 
@@ -110,8 +110,7 @@
             this.bookMenuToolStripMenuItem.BackgroundImage = global::CustomStickyNotes.Properties.Resources.redbookmark;
             this.bookMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem1,
-            this.saveAsToolStripMenuItem1,
-            this.backToMenuToolStripMenuItem});
+            this.saveAsToolStripMenuItem1});
             this.bookMenuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bookMenuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bookMenuToolStripMenuItem.Name = "bookMenuToolStripMenuItem";
@@ -120,7 +119,7 @@
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
             // saveAsToolStripMenuItem1
@@ -128,7 +127,7 @@
             this.saveAsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newJournalToolStripMenuItem1});
             this.saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
+            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem1.Text = "Save As";
             // 
             // newJournalToolStripMenuItem1
@@ -136,12 +135,6 @@
             this.newJournalToolStripMenuItem1.Name = "newJournalToolStripMenuItem1";
             this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.newJournalToolStripMenuItem1.Text = "New Journal";
-            // 
-            // backToMenuToolStripMenuItem
-            // 
-            this.backToMenuToolStripMenuItem.Name = "backToMenuToolStripMenuItem";
-            this.backToMenuToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
-            this.backToMenuToolStripMenuItem.Text = "Back to Menu";
             // 
             // _customRTB
             // 
@@ -191,7 +184,6 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem newJournalToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem backToMenuToolStripMenuItem;
     }
 }
 

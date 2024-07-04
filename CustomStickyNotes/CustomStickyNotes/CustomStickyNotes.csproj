@@ -158,5 +158,8 @@
   <ItemGroup>
     <None Include="Resources\redbookmark.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextpagebtn2mouseover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

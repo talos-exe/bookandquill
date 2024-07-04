@@ -30,24 +30,16 @@ namespace CustomStickyNotes
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 
         {
-            if (!newJournalClicked)
+            DialogResult dialog = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
             {
-                DialogResult dialog = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo);
-                if (dialog == DialogResult.Yes)
-                {
-                    Application.ExitThread();
-                }
-                else if (dialog == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
+                Application.ExitThread();
+            }
+            else if (dialog == DialogResult.No)
+            {
+                e.Cancel = true;
             }
             
-        }
-
-        private void expandButtons(object sender, MouseEventArgs e)
-        {
-
         }
 
         private void mouseEnterToolStripLabel(object sender, EventArgs e)
@@ -75,7 +67,8 @@ namespace CustomStickyNotes
         {
             menuClick.Play();
             newJournalClicked = true;
-            Form2 journalForm = new Form2();
+            string _newJournalName = "Untitled";
+            Form2 journalForm = new Form2(_newJournalName);
             journalForm.Show();
             //this.Hide(); // CHANGE TO CLOSE IN COMPILE
         }

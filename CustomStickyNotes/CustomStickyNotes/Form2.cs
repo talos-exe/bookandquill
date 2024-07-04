@@ -12,6 +12,7 @@ using System.Media;
 using System.Collections;
 using System.Linq.Expressions;
 using System.Diagnostics.Eventing.Reader;
+using System.IO;
 
 namespace CustomStickyNotes {
 
@@ -29,10 +30,11 @@ namespace CustomStickyNotes {
         private string[] journalEntries = new string[100];
 
         
-        public Form2()
+        public Form2(string journalName)
         {
             InitializeComponent();
             this.Controls.Add(_customRTB);
+            this.Text = journalName + " - Book and Quill";
             DoubleBuffered = true;
             KeyPreview = true;
             nextPageBtn.BackgroundImage = (System.Drawing.Image)(Properties.Resources.nextpagebtn);
@@ -41,6 +43,7 @@ namespace CustomStickyNotes {
             flipPageOne = new SoundPlayer("flip1.wav");
             flipPageTwo = new SoundPlayer("flip2.wav");
             flipPageThree = new SoundPlayer("flip3.wav");
+            
         }
 
 
@@ -173,6 +176,16 @@ namespace CustomStickyNotes {
             if (_customRTBTextChanged) { 
                 if (MessageBox.Show("You have unsaved changes. Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo) == DialogResult.No) { e.Cancel = true; } else { e.Cancel = false; }
             }
+        }
+
+        private void backPageBtn_mouseEnter(object sender, EventArgs e)
+        {
+            backPageBtn.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.nextpagebtn2mouseover));
+        }
+
+        private void backPageBtn_mouseLeave(object sender, EventArgs e)
+        {
+            backPageBtn.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.nextpagebtn2));
         }
     }
 

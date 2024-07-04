@@ -213,6 +213,16 @@ namespace CustomStickyNotes.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nextpagebtn2mouseover {
+            get {
+                object obj = ResourceManager.GetObject("nextpagebtn2mouseover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nextpagebtnmouseovert {
             get {
                 object obj = ResourceManager.GetObject("nextpagebtnmouseovert", resourceCulture);

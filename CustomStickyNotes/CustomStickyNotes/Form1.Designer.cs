@@ -57,7 +57,6 @@
             this.panel1.Size = new System.Drawing.Size(436, 149);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.expandButtons);
             // 
             // tableLayoutPanel1
             // 
@@ -143,11 +142,11 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Monocraft", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(313, 363);
+            this.label6.Location = new System.Drawing.Point(306, 363);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 28);
+            this.label6.Size = new System.Drawing.Size(180, 28);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Version 1.0";
+            this.label6.Text = "Version 1.02";
             // 
             // label5
             // 
