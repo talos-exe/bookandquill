@@ -4,4 +4,4 @@ Current version: 1.02
 
 Made using Windows Forms, .NET Framework in C#.
 
-###Author: nohbdy
+Author: nohbdy
