@@ -155,5 +155,8 @@
   <ItemGroup>
     <None Include="Resources\feathermenuicon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbookmark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

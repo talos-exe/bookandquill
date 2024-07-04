@@ -14,10 +14,7 @@ namespace CustomStickyNotes
     public partial class Form1 : Form
     {
         private SoundPlayer menuClick = new SoundPlayer("uiclick.wav");
-        Label newLabel;
         bool newJournalClicked = false;
-
-
 
         public Form1()
         {
@@ -80,7 +77,7 @@ namespace CustomStickyNotes
             newJournalClicked = true;
             Form2 journalForm = new Form2();
             journalForm.Show();
-            this.Hide(); // CHANGE TO CLOSE IN COMPILE
+            //this.Hide(); // CHANGE TO CLOSE IN COMPILE
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

@@ -37,8 +37,7 @@
             this.saveToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.newJournalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.revealInFileExplorerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this._customRTB = new CustomStickyNotes.CustomRTB();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -93,6 +92,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Firebrick;
+            this.menuStrip1.BackgroundImage = global::CustomStickyNotes.Properties.Resources.redbookmark;
             this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(128, 128);
@@ -100,19 +100,18 @@
             this.bookMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(140, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(20, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // bookMenuToolStripMenuItem
             // 
-            this.bookMenuToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bookMenuToolStripMenuItem.BackgroundImage = global::CustomStickyNotes.Properties.Resources.redbookmark;
             this.bookMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveToolStripMenuItem1,
             this.saveAsToolStripMenuItem1,
-            this.revealInFileExplorerToolStripMenuItem1,
-            this.quitToolStripMenuItem1});
+            this.backToMenuToolStripMenuItem});
             this.bookMenuToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bookMenuToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.bookMenuToolStripMenuItem.Name = "bookMenuToolStripMenuItem";
@@ -121,7 +120,7 @@
             // saveToolStripMenuItem1
             // 
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.saveToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.saveToolStripMenuItem1.Text = "Save";
             // 
             // saveAsToolStripMenuItem1
@@ -129,26 +128,20 @@
             this.saveAsToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newJournalToolStripMenuItem1});
             this.saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
+            this.saveAsToolStripMenuItem1.Size = new System.Drawing.Size(141, 22);
             this.saveAsToolStripMenuItem1.Text = "Save As";
             // 
             // newJournalToolStripMenuItem1
             // 
             this.newJournalToolStripMenuItem1.Name = "newJournalToolStripMenuItem1";
-            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(139, 22);
+            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
             this.newJournalToolStripMenuItem1.Text = "New Journal";
             // 
-            // revealInFileExplorerToolStripMenuItem1
+            // backToMenuToolStripMenuItem
             // 
-            this.revealInFileExplorerToolStripMenuItem1.Name = "revealInFileExplorerToolStripMenuItem1";
-            this.revealInFileExplorerToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.revealInFileExplorerToolStripMenuItem1.Text = "Reveal in File Explorer";
-            // 
-            // quitToolStripMenuItem1
-            // 
-            this.quitToolStripMenuItem1.Name = "quitToolStripMenuItem1";
-            this.quitToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.quitToolStripMenuItem1.Text = "Quit";
+            this.backToMenuToolStripMenuItem.Name = "backToMenuToolStripMenuItem";
+            this.backToMenuToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.backToMenuToolStripMenuItem.Text = "Back to Menu";
             // 
             // _customRTB
             // 
@@ -179,7 +172,7 @@
             this.MaximizeBox = false;
             this.Name = "Form2";
             this.Text = "Book and Quill";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_Closing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -198,8 +191,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem newJournalToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem revealInFileExplorerToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem backToMenuToolStripMenuItem;
     }
 }
 

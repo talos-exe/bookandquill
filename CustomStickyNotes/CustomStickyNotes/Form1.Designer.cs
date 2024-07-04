@@ -157,9 +157,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(259, 335);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(236, 28);
+            this.label5.Size = new System.Drawing.Size(264, 28);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Created by: luke";
+            this.label5.Text = "Created by: nohbdy";
             // 
             // label1
             // 

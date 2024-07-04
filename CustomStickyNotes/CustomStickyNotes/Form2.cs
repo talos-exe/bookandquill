@@ -13,7 +13,7 @@ using System.Collections;
 using System.Linq.Expressions;
 using System.Diagnostics.Eventing.Reader;
 
-namespace CustomStickyNotes { 
+namespace CustomStickyNotes {
 
     public partial class Form2 : Form
     {
@@ -26,7 +26,7 @@ namespace CustomStickyNotes {
         private int pageIndex;
         private int maxPages;
         private int lrAnswer;
-        private ArrayList journalEntries = new ArrayList();
+        private string[] journalEntries = new string[100];
 
         
         public Form2()
@@ -60,10 +60,10 @@ namespace CustomStickyNotes {
         }
 
         private void loadPageNumbers()
-        {
+        { 
             pageIndex = 0;
-            maxPages = pageIndex;
-            label1.Text = "Page " + (pageIndex + 1).ToString() + " of " + (maxPages+1).ToString();
+            maxPages = 0;
+            label1.Text = "Page " + (pageIndex + 1).ToString() + " of " + (maxPages + 1).ToString();
 
         }
 
@@ -74,15 +74,17 @@ namespace CustomStickyNotes {
             // Checks for left right button use. If lr = 0, its next page. If lr = 1, its going back a page.
             if (lr == 0)
             {
-                if (pageIndex == maxPages)
+                if (pageIndex == maxPages) // Check if index is equal to the max
                 {
+                    journalEntries[pageIndex] = _customRTB.Text;
                     pageIndex++;
-                    maxPages = maxPages + 1;
-                    label1.Text = "Page " + (pageIndex + 1).ToString() + " of " + (maxPages + 1).ToString();
-                    _customRTB.Clear();
+                    maxPages++;
+                    label1.Text = "Page " + (pageIndex+1).ToString() + " of " + (maxPages+1).ToString();
+                    _customRTB.Text = "";
                 }
-                else if (pageIndex < maxPages)
+                else if (pageIndex < maxPages) // Check if index is less than the max
                 {
+                    journalEntries[pageIndex] = _customRTB.Text;
                     pageIndex++;
                     _customRTB.Text = journalEntries[pageIndex].ToString();
                     label1.Text = "Page " + (pageIndex + 1).ToString() + " of " + (maxPages + 1).ToString();
@@ -93,9 +95,9 @@ namespace CustomStickyNotes {
             }
             else if (lr == 1)
             {
-                if (pageIndex >= 0 && (pageIndex == maxPages || pageIndex < maxPages))
+                if (pageIndex > 0 && pageIndex <= maxPages)
                 {
-                    //journalEntries[pageIndex] = _customRTB.Text;
+                    journalEntries[pageIndex] = _customRTB.Text;
                     pageIndex--;
                     label1.Text = "Page " + (pageIndex + 1).ToString() + " of " + (maxPages + 1).ToString();
                     _customRTB.Text = journalEntries[pageIndex].ToString();
@@ -128,8 +130,6 @@ namespace CustomStickyNotes {
         private void customRTBTextChanged(object sender, EventArgs e)
         {
             _customRTBTextChanged = true;
-            if (pageIndex>=0 && pageIndex < journalEntries.Count) {journalEntries[pageIndex] = _customRTB.Text; }
-            else { journalEntries.Add(_customRTB.Text); }
             //Console.WriteLine(journalEntries.Count.ToString());
         }
 
@@ -168,23 +168,12 @@ namespace CustomStickyNotes {
 
         }
 
-        private void Form2_Closing(object sender, FormClosingEventArgs e)
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_customRTBTextChanged)
-            {
-                DialogResult dialog = MessageBox.Show("You have unsaved changes. Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo);
-                if (dialog == DialogResult.Yes)
-                {
-                    Application.ExitThread();
-                }
-                else if (dialog == DialogResult.No)
-                {
-                    e.Cancel = true;
-                }
+            if (_customRTBTextChanged) { 
+                if (MessageBox.Show("You have unsaved changes. Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo) == DialogResult.No) { e.Cancel = true; } else { e.Cancel = false; }
             }
         }
-
-
     }
 
     
