@@ -110,6 +110,7 @@
             this.label3.Size = new System.Drawing.Size(231, 36);
             this.label3.TabIndex = 1;
             this.label3.Text = "Open Journal";
+            this.label3.Click += new System.EventHandler(this.openJournalBtn_Clicked);
             this.label3.MouseEnter += new System.EventHandler(this.mouseEnterToolStripLabel);
             this.label3.MouseLeave += new System.EventHandler(this.mouseLeaveToolStripLabel);
             // 
@@ -146,7 +147,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(180, 28);
             this.label6.TabIndex = 3;
-            this.label6.Text = "Version 1.02";
+            this.label6.Text = "Version 1.03";
             // 
             // label5
             // 

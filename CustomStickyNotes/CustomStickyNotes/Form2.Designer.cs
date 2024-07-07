@@ -1,4 +1,6 @@
-﻿namespace CustomStickyNotes
+﻿using System;
+
+namespace CustomStickyNotes
 {
     partial class Form2
     {
@@ -100,7 +102,7 @@
             this.bookMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(9, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(20, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(140, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -121,6 +123,7 @@
             this.saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
             this.saveToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem1.Text = "Save";
+            this.saveToolStripMenuItem1.Click += new System.EventHandler(this.saveToolStripMenuItem1_Click);
             // 
             // saveAsToolStripMenuItem1
             // 
@@ -133,7 +136,7 @@
             // newJournalToolStripMenuItem1
             // 
             this.newJournalToolStripMenuItem1.Name = "newJournalToolStripMenuItem1";
-            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(133, 22);
+            this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.newJournalToolStripMenuItem1.Text = "New Journal";
             // 
             // _customRTB

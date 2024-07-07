@@ -30,16 +30,7 @@ namespace CustomStickyNotes
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 
         {
-            DialogResult dialog = MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
-            {
-                Application.ExitThread();
-            }
-            else if (dialog == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            
+            Application.ExitThread();
         }
 
         private void mouseEnterToolStripLabel(object sender, EventArgs e)
@@ -57,10 +48,7 @@ namespace CustomStickyNotes
         private void promptForQuit(object sender, EventArgs e)
         {
             menuClick.Play();
-            if (MessageBox.Show("Are you sure you want to quit?", "Quit", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-            {
-                Application.ExitThread();
-            }
+            Application.ExitThread();
         }
 
         private void openNewJournal(object sender, EventArgs e)
@@ -68,7 +56,7 @@ namespace CustomStickyNotes
             menuClick.Play();
             newJournalClicked = true;
             string _newJournalName = "Untitled";
-            Form2 journalForm = new Form2(_newJournalName);
+            Form2 journalForm = new Form2(_newJournalName, newJournalClicked);
             journalForm.Show();
             //this.Hide(); // CHANGE TO CLOSE IN COMPILE
         }
@@ -81,6 +69,22 @@ namespace CustomStickyNotes
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void openJournalBtn_Clicked(object sender, EventArgs e)
+        {
+            menuClick.Play();
+            newJournalClicked = false;
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text Files |*.txt";
+            openFileDialog.Title = "Select Journal";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string openJournName = System.IO.Path.GetFileName(openFileDialog.FileName);
+                string openJournPath = openFileDialog.FileName;
+                Form2 openJournalForm = new Form2(openJournName, newJournalClicked, openJournPath);
+                openJournalForm.Show();
+            }
         }
     }
 }
