@@ -138,6 +138,7 @@ namespace CustomStickyNotes
             this.newJournalToolStripMenuItem1.Name = "newJournalToolStripMenuItem1";
             this.newJournalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.newJournalToolStripMenuItem1.Text = "New Journal";
+            this.newJournalToolStripMenuItem1.Click += new System.EventHandler(this.newJournalClicked);
             // 
             // _customRTB
             // 

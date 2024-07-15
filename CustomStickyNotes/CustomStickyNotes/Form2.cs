@@ -32,6 +32,7 @@ namespace CustomStickyNotes
         private string journalTitle;
         private bool journalNewOrOldSelect;
         private string journalPath;
+        private string saveJournalPath;
 
         public Form2(string journalName, bool _newJournal_, string journalPath)
         {
@@ -49,7 +50,7 @@ namespace CustomStickyNotes
             this.journalTitle = journalName;
             this.journalNewOrOldSelect = _newJournal_;
             this.journalPath = journalPath;
-            
+
 
         }
 
@@ -192,7 +193,7 @@ namespace CustomStickyNotes
                 {
                     MessageBox.Show("The file could not be read.");
                 }
-                
+
 
             }
             else
@@ -257,7 +258,10 @@ namespace CustomStickyNotes
                 save.Filter = "Text Files |*.txt";
                 if (save.ShowDialog() == DialogResult.OK)
                 {
+                    this.Text = System.IO.Path.GetFileName(save.FileName) + " - Book and Quill";
+                    journalTitle = this.Text;
                     StreamWriter writer = new StreamWriter(File.Create(save.FileName));
+                    saveJournalPath = save.FileName;
                     using (writer)
                     {
                         for (int i = 0; i < journalEntries.Length; i++)
@@ -276,9 +280,51 @@ namespace CustomStickyNotes
                 }
             }
 
+            else
+            {
+                if (saveJournalPath != null)
+                {
+                    StreamWriter writer = new StreamWriter(saveJournalPath);
+                    using (writer)
+                    {
+                        for (int i = 0; i < journalEntries.Length; i++)
+                        {
+                            if (journalEntries[i] != null)
+                            {
+                                writer.WriteLine(journalEntries[i].ToString());
+                            }
+                        }
+                    }
+                    writer.Close();
+                }
+            }
+
 
         }
 
-
+        private void newJournalClicked(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Title = "Save As";
+            save.Filter = "Text Files |*.txt";
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                this.Text = System.IO.Path.GetFileName(save.FileName) + " - Book and Quill";
+                journalTitle = this.Text;
+                StreamWriter writer = new StreamWriter(File.Create(save.FileName));
+                saveJournalPath = save.FileName;
+                using (writer)
+                {
+                    for (int i = 0; i < journalEntries.Length; i++)
+                    {
+                        if (journalEntries[i] != null)
+                        {
+                            writer.WriteLine(journalEntries[i].ToString());
+                        }
+                    }
+                }
+                writer.Close();
+            }
+        }
     }
 }
